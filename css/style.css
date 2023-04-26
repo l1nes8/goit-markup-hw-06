@@ -790,13 +790,15 @@ img{
 }
 
 .btn-form {
-    
+    position: relative;
+
+
     padding-top: 8px;
     padding-bottom: 8px;
     padding-left: 24px;
     padding-right: 64px;
     
-    
+    transition:  background-color var(--hover-animation);
     
     font-weight: 500;
     font-size: 16px;
@@ -811,4 +813,13 @@ img{
 .btn-form:hover, 
 .btn-form:focus {
     background-color: var(--hover-and-focus-color);
+}
+
+.icon-sub {
+    position: absolute;
+
+    top: 10px;
+    right: 24px;
+
+    fill: var(--white-color);
 }
