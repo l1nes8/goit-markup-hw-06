@@ -22,8 +22,9 @@ body {
     transition: color var(--hover-animation);
 }
 
-.link:hover, .link:focus {
-    color: #404bbf;
+.link:hover, 
+.link:focus {
+    color: var(--hover-and-focus-color);
 }
 
 .link-sm {
@@ -42,7 +43,7 @@ body {
 
 .link-sm:hover, 
 .link-sm:focus {
-    background-color: #404BBF;
+    background-color: var(--hover-and-focus-color);
     
 }
 
@@ -81,6 +82,10 @@ img{
     display: flex;
 }
 
+.textarea {
+    resize: none
+}
+
 
     /* --primary-text-color -#2E2F42; */
     /* --title-text-color- #434455; */
@@ -89,8 +94,8 @@ img{
 :root {
     --primary-text-color: #2E2F42;
     --title-text-color: #434455;
-    --background-color: #404BBF;
     --background-color-button: #4d5ae5;
+    --hover-and-focus-color: #404BBF;
     --white-color: #FFFFFF;
     --gray-color: #F4F4FD;
     --clients-color: #8e8f99;
@@ -145,7 +150,7 @@ img{
 
 .header-nav-link {
     position: relative;
-    color: var(--background-color) !important;
+    color: var(--hover-and-focus-color) !important;
 }
 
 .header-nav-link::after {
@@ -159,7 +164,7 @@ img{
     height: 4px;
     border-radius: 2px;
     
-    background-color: var(--background-color);
+    background-color: var(--hover-and-focus-color);
 }
 
 .logo-header-studio {
@@ -214,11 +219,6 @@ img{
 .list-social-media-footer {
     display: flex;
     gap: 16px;
-    
-}
-
-.icons-sm-footer {
-    fill: var(--gray-color);
 }
 
 .link-sm-footer {
@@ -242,6 +242,10 @@ img{
     
 }
 
+.icons-sm-footer {
+    fill: var(--gray-color);
+}
+
 .logo-footer-studio {
     color: var(--gray-color);
     display: inline-block;
@@ -256,7 +260,7 @@ img{
     line-height: 1.5;
 }
 
-.social-media {
+.primary-text-footer {
     color: var(--white-color);
     margin-bottom: 16px;
     
@@ -280,8 +284,7 @@ img{
 /* main Web*/
 
 /* hero */
-.hero {
-    text-align: center; 
+.hero { 
     padding-top: 188px;
     padding-bottom: 188px;
     margin-left: auto;
@@ -302,6 +305,7 @@ img{
 } 
 
 .hero-title { 
+    text-align: center;
     color: var(--white-color);
     
     font-weight: 700;
@@ -342,10 +346,10 @@ img{
 
 .hero-button:hover, 
 .hero-button:focus {
-    background-color: var(--background-color)
+    background-color: var(--hover-and-focus-color)
 }
 
-
+/* Modal */
 
 .backdrop {
     position: fixed;
@@ -374,6 +378,7 @@ img{
     
     width: 408px;
     height: 576px;
+    padding: 24px;
 
     background-color: #FCFCFC;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 
@@ -383,8 +388,8 @@ img{
 
 .modal-btn {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 24px;
+    right: 24px;
     
     transition: color var(--hover-animation),  background-color var(--hover-animation);
 
@@ -401,7 +406,7 @@ img{
 .modal-btn:hover, 
 .modal-btn:focus {
     color: var(--white-color);
-    background-color: #404BBF;
+    background-color: var(--hover-and-focus-color);
 }
 
 .modal-icon {
@@ -413,6 +418,19 @@ img{
     fill: currentColor;
 }
 
+.primary-text-modal {
+    display: block;
+
+    margin-top: 72px;
+    margin-bottom: 16px;
+
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;      
+    
+    color: var(--primary-text-color);
+}
 
 
 /* advantage */
@@ -593,8 +611,8 @@ img{
 
 .link-clients:hover, 
 .link-clients:focus{
-    border-color: #404BBF;
-    color: #404BBF;
+    border-color: var(--hover-and-focus-color);
+    color: var(--hover-and-focus-color);
 }
 
 .icons-clients {
@@ -653,9 +671,10 @@ img{
     cursor: pointer;
 }
 
-.portfolio-button:hover, .portfolio-button:focus {
+.portfolio-button:hover, 
+.portfolio-button:focus {
     color: var(--white-color);
-    background-color:  var(--background-color);
+    background-color:  var(--hover-and-focus-color);
     border: 1px solid transparent;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
     0px 2px 1px rgba(0, 0, 0, 0.08),
@@ -743,4 +762,53 @@ img{
     padding-right: 32px;
    
     color: var(--gray-color);
+}
+
+/* Form */
+
+.mail-sub {
+   display: flex;
+   gap: 24px;
+   align-items: center;
+   justify-content: center;
+}
+
+.input-footer {
+    
+    
+    padding: 8px 16px;
+    background-color: transparent;
+
+    color: var(--white-color);
+    font-weight: 400;   
+    font-size: 12px;
+    line-height: 2;  
+
+    border: 1px solid #FFFFFF;
+    border-radius: 4px; 
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+
+.btn-form {
+    
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 24px;
+    padding-right: 64px;
+    
+    
+    
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+
+    color: var(--white-color);
+    background-color: var(--background-color-button);
+    border-radius: 4px;
+    border-color: transparent;
+}
+
+.btn-form:hover, 
+.btn-form:focus {
+    background-color: var(--hover-and-focus-color);
 }
