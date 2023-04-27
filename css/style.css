@@ -420,6 +420,7 @@ img{
 
 .primary-text-modal {
     display: block;
+    text-align: center;
 
     margin-top: 72px;
     margin-bottom: 16px;
@@ -774,9 +775,12 @@ img{
 }
 
 .input-footer {
+    outline: 2px solid transparent;
     
-    
-    padding: 8px 16px;
+    width: 264px;
+    height: 40px;
+
+    padding-left: 16px;
     background-color: transparent;
 
     color: var(--white-color);
