@@ -54,31 +54,40 @@
             <strong class="primary-text-modal">Leave your contacts and we will call you back</strong>
         <form name="content-form" >
               
-            <label for="name-modal">Name</label>
-          <div>
-            <input type="text" id="name-modal" name="user-name">
+            <label for="name-modal" class="label-modal">Name</label>
+          <div class="modal-form-field">
+            <input type="text" id="name-modal" name="user-name" class="input-modal">
+            <svg class="icon-modal" width="12px" height="12px">
+              <use href="./images/icons.svg#icon-modal-1"></use>
+            </svg>
            </div>
 
 
-            <label for="phone-modal">Phone</label>
-          <div>
-            <input type="tel" id="phone-modal" name="user-tel">
+            <label for="phone-modal" class="label-modal">Phone</label>
+          <div class="modal-form-field">
+            <input type="tel" id="phone-modal" name="user-tel" class="input-modal">
+            <svg class="icon-modal" width="13px" height="13px">
+              <use href="./images/icons.svg#icon-modal-2"></use>
+            </svg>
           </div>
 
 
-            <label for="email-modal">Email</label>
-          <div>
-            <input type="email" id="email-modal" name="user-email">
+            <label for="email-modal" class="label-modal">Email</label>
+          <div class="modal-form-field">
+            <input type="email" id="email-modal" name="user-email" class="input-modal">
+            <svg class="icon-modal" width="15px" height="12px">
+              <use href="./images/icons.svg#icon-modal-3"></use>
+            </svg>
           </div>
          
-           <label for="">Comment</label>
-          <textarea name="" rows="5" placeholder="Text input" class="textarea"></textarea>
+           <label for="coment-modal" class="label-modal">Comment</label>
+          <textarea name="coment-user" rows="5" placeholder="Text input" id="coment-modal" class="resize-none textarea-modal"></textarea>
 
          <label for="">
           <input type="checkbox" name="checkbox">
-           <span>I accept the terms and conditions of the <a href="">Privacy Policy</a></span>
+           <span class="accept-modal">I accept the terms and conditions of the <a href="" class="link-modal">Privacy Policy</a></span>
 
-          <button type="submit">Send</button>
+          <button type="submit" class="btn-modal">Send</button>
          </label>
         </form>
 
