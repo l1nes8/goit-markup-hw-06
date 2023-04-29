@@ -822,7 +822,7 @@ img{
     display: block;
     text-align: center;
 
-    margin-top: 72px;
+    margin-top: 48px;
     margin-bottom: 16px;
 
 
@@ -858,9 +858,12 @@ img{
     width: 100%;
     height: 40px;
 
+    transition: border-color var(--hover-animation);
+
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
-    
+
+    outline: 1px solid transparent;
 }
 
 .icon-modal {
@@ -868,9 +871,18 @@ img{
     top: 14px;
     left: 19px;
 
+    transition: fill var(--hover-animation);
+
     pointer-events: none;
 }
 
+.input-modal:focus {
+    border-color: var(--background-color-button);
+}
+
+.input-modal:focus + .icon-modal {
+    fill: var(--background-color-button);
+}
 
 .textarea-modal {
     
@@ -887,9 +899,13 @@ img{
     font-size: 12px;
     line-height: 1.6;
 
+    transition: border-color var(--hover-animation);
+
     color: var(--title-text-color);
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px; 
+
+    outline: 1px solid transparent;
 }
 
 .textarea-modal::placeholder {
@@ -901,11 +917,54 @@ img{
     color: rgba(46, 47, 66, 0.4);
 }
 
-.accept-modal {
+.textarea-modal:focus {
+    border-color: var(--background-color-button);
+}
 
-    display: inline-block;
+.agreemnet-modal-form {
+    display: flex;
+    gap: 8px;
+
     margin-bottom: 24px;
+}
 
+
+.checkbox-modal {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.modal-form-icon-checkbox {
+    position: absolute;
+    pointer-events: none;
+    left: 24px;
+}
+
+.modal-form-icon-uncheked {
+    opacity: 1;
+    transition: opacity var(--hover-animation);
+}
+
+input[type="checkbox"]:checked + .modal-form-icon-checkbox > .modal-form-icon-uncheked {
+    opacity: 0;
+}
+
+.modal-form-icon-cheked {
+    opacity: 0;
+    transition: opacity var(--hover-animation);
+}
+
+input[type="checkbox"]:checked + .modal-form-icon-checkbox > .modal-form-icon-cheked {
+    opacity: 1;
+}
+
+
+
+.accept-modal-text {
+    display: inline-block;
+    
     font-weight: 400;
     font-size: 12px;
     line-height: 1.6;
@@ -943,6 +1002,7 @@ img{
     border-radius: 4px;
 }
 
-.btn-modal:hover, .btn-modal:focus {
+.btn-modal:hover, 
+.btn-modal:focus {
     background-color: var(--hover-and-focus-color);
 }
